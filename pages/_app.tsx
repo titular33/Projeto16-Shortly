@@ -1,8 +1,8 @@
 import express, { json } from "express";
 import cors from "cors";
-import authRouter from './routers/1.auth/router.jsx';
-import usersRouter from './routers/2.users/router.jsx';
-import urlsRouter from './routers/3.urls/router.jsx';
+import authRouter from './routers/auth/router.jsx';
+import usersRouter from './routers/users/router.jsx';
+import urlsRouter from './routers/urls/router.jsx';
 import { helloWorld } from "./utils/controllers.jsx";
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
