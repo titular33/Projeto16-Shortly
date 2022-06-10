@@ -1,7 +1,7 @@
 import db from '../../db.jsx';
 import { SignInSchema, UserSchema } from '../validation/schemas.js';
 import bcrypt from 'bcrypt';
-import { userRepository } from '../../repositories/user.jsx';
+import { userRepository } from '../../repositories/users.jsx';
 
 
 export const validateToken= async (req, res, next) => {

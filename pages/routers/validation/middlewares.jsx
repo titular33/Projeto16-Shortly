@@ -30,7 +30,7 @@ export async function validateToken(req, res, next) {
 export async function validateSchema(req, res, next) {
     let schema = null;
     const path = req.originalUrl;
-    if (path.includes("/login")) {
+    if (path.includes("/signin")) {
         schema = SignInSchema;
     } else if (path.includes("/signup")) {
         schema = UserSchema;

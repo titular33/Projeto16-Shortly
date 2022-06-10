@@ -1,7 +1,7 @@
 import db from "../..db.jsx";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { userRepository } from '../../repositories/user.jsx';
+import { userRepository } from '../../repositories/users.jsx';
 export async function createSession(req, res) {
     console.log('creating session');
     const userId = res.locals.user.id;
