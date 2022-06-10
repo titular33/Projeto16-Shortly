@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import sanitizeHtml from "sanitize-html";
-import db from "../db.js";
+import db from "../db.jsx";
 
 async function createShortUrl(url, userId) {
     const shortUrl = nanoid(8);
