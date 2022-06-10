@@ -1,4 +1,4 @@
-import db from '../../db.js';
+import db from '../../db.jsx';
 
 
 export async function validateUrl(req, res, next) {
