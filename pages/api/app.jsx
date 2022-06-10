@@ -5,7 +5,6 @@ import usersRouter from '../routers/users/router.jsx';
 import urlsRouter from '../routers/urls/router.jsx';
 import { helloWorld } from "../routers/validation/controllers.jsx";
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 import { getRanking } from "../routers/users/controllers.jsx";
 
 const MyApp = express();
