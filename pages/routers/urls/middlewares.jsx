@@ -1,12 +1,6 @@
-import db from '../../db.jsx';
+import { urlRepository } from '../../repositories/urls.jsx';
 import { UrlSchema } from '../../validation/schemas.jsx';
 
-
-export async function validateUrl(req, res, next) {
-    const { error } = UrlSchema.validate(req.body);
-    if (error) return res.status(422).send({ error: error.details[0].message });
-    next();
-}
 
 
 export async function validateUrlId(req, res, next) {
