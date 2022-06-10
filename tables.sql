@@ -1,18 +1,22 @@
-CREATE DATABASE IF NOT EXISTS "shortly";
+DROP TABLE "sessions";
+DROP TABLE "users";
+Drop TABLE "urls";
+
 
 CREATE TABLE IF NOT EXISTS "users" (
     "id" serial PRIMARY KEY,
-    "username" text NOT NULL,
+    "name" text NOT NULL,
+    "email" text NOT NULL,
     "password" text NOT NULL,
-    "createdAt" timestamp NOT NULL DEFAULT now()
+    "created" timestamp NOT NULL DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS "sessions" (
     "id" serial PRIMARY KEY,
     "userId" integer NOT NULL REFERENCES "users"("id"),
     "token" text NOT NULL UNIQUE,
-    "createdAt" timestamp NOT NULL DEFAULT now(),
     "isValid" boolean NOT NULL DEFAULT true
+    "created" timestamp NOT NULL DEFAULT now(),
 );
 
 CREATE TABLE IF NOT EXISTS "urls" (
@@ -21,6 +25,6 @@ CREATE TABLE IF NOT EXISTS "urls" (
     "shortUrl" text NOT NULL,
     "userId" integer NOT NULL REFERENCES "users"("id"),
     "visits" int NOT NULL DEFAULT 0,
-    "createdAt" timestamp NOT NULL DEFAULT now(),
+    "created" timestamp NOT NULL DEFAULT now(),
     "isActive" boolean NOT NULL DEFAULT true
 );
